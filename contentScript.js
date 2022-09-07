@@ -12,8 +12,10 @@ const handleInterval = () => {
         .sort()
         .filter(label => !label.includes('(you)'))
 
-    const listOfNames = new Intl.ListFormat().format(names)
-    document.title = titleELement.getAttribute(attributeName) + ' with ' + listOfNames
+    if (names.length === 0) {
+        const listOfNames = new Intl.ListFormat().format(names)
+        document.title = titleELement.getAttribute(attributeName) + ' with ' + listOfNames
+    }
 }
 
 
