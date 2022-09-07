@@ -1,0 +1,24 @@
+{
+  "name": "Whereby Extension to add participants in title",
+  "description": "in order to have an idea who is in this call, the title will be appended with the names of the people in this call. which laters allows better timetracking",
+  "version": "1.0",
+  "manifest_version": 3,
+  
+  "permissions": ["storage", "activeTab", "scripting"],
+  "content_scripts": [
+    {
+      "matches": ["*://*.whereby.com/*", "https://api.whereby.dev/*"],
+      "js": ["contentScript.js"]
+    }
+  ],
+  "action": {
+    "icons": {
+      "16": "/images/wherebyPeople16.png",
+      "32": "/images/wherebyPeople32.png",
+      "48": "/images/wherebyPeople48.png",
+      "64": "/images/wherebyPeople64.png",
+      "128": "/images/wherebyPeople128.png"
+    }
+  }
+}
+
